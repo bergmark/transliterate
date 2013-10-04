@@ -1,0 +1,22 @@
+#!/bin/bash
+
+rm -vf test/Test.js
+fay --package fay-text --pretty --Wall --include=src test/Test.hs
+node test/Test.js
+
+echo "--------"
+echo "js tests"
+echo "--------"
+
+rm -vf src/Translit/Hangeul.js test/JsTest-compiled.js
+fay --package fay-text --pretty --Wall --strict Translit.Hangeul --include src --library src/Translit/Hangeul.hs
+cat src/Translit/Hangeul.js > test/JsTest-compiled.js
+cat test/JsTest.js >> JsTest-compiled.js
+node test/JsTest-compiled.js
+
+echo "----------"
+echo "js example"
+echo "----------"
+
+rm -vf test/FayTestWeb.js
+fay --package fay-text,fay-jquery --pretty --Wall --include src test/FayTest.hs

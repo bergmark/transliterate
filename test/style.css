@@ -1,0 +1,21 @@
+body
+{
+  background-image:url("bg.png");
+  background-size: 800px;
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+body { padding: 160px 0 0 140px; }
+#inp, #out
+{
+  display: block;
+  width: 500px;
+  font-size: 30px;
+  height: 50px;
+  border: 1px solid black;
+}
+#out
+{
+  margin-top: 30px;
+  font-size: 40px;
+}
