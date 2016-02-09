@@ -29,9 +29,9 @@ library
   default-language:    Haskell2010
   build-depends:
       base       == 4.*
-    , fay        == 0.18.*
-    , fay-jquery == 0.5.*
+    , fay        >= 0.21 && < 0.24
+    , fay-jquery >= 0.5 && < 0.7
     , fay-text   == 0.3.*
     , regex-pcre-builtin
     , split      == 0.2.*
-    , text       >= 0.10 && < 0.12
+    , text       >= 0.10 && < 1.3

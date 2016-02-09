@@ -15,9 +15,7 @@ main = ready $ do
 
   (`keyup` inp) $ \_ -> do
     t <- getVal inp
-    setVal (toHangeul t) out
-    return ()
+    void $ setVal (toHangeul t) out
   (`keyup` out) $ \_ -> do
     b <- getVal out
-    setVal (fromHangeul b) inp
-    return ()
+    void $ setVal (fromHangeul b) inp
