@@ -11,7 +11,7 @@ import qualified Prelude      as L
 import           Prelude      hiding (intercalate, intersperse)
 import           Translit.Fay
 #else
-import           Prelude
+import           Prelude      hiding((<$>))
 import           Translit.GHC
 #endif
 
